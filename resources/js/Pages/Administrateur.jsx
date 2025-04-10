@@ -66,7 +66,7 @@ const Administrators = ({administrators}) => {
                     transition={{ duration: 0.3 }}
                   />
                   <div className="mt-4 text-center">
-                    <h4 className="text-xl font-semibold text-gray-800">{admin.nom}</h4>
+                    <h4 className="text-xl font-semibold text-gray-800">{admin.name}</h4>
                     <p className="text-sm text-gray-500 mt-2">{admin.role}</p>
                     <p className="text-xs text-gray-400 mt-1">{admin.email}</p>
                   </div>
