@@ -1,0 +1,61 @@
+{
+  "home": "Home",
+  "news": "News",
+  "jamats": "Jamats",
+  "about": "About",
+  "contact": "Contact",
+  "media": "Media",
+  "photo": "Photo",
+  "descphoto": "Description for Photo",
+  "video": "Video",
+  "descvideo": "Description for Video",
+  "login": "Login",
+
+  "bienvenue": "Welcome to Aksiam",
+  "bienvenue_text": "A non-profit organization serving the community.",
+  "bienvenue_btn": "Learn more",
+  "bienvenue_btn2": "Join us",
+
+  "apropos": "About Aksiam",
+  "mission": "Our Mission & Vision",
+  "missionText": "Aksiam is a non-profit organization dedicated to helping local communities through educational and social initiatives. Our mission is to create a lasting impact by providing resources and support to those in need.",
+  "vision": "Our Vision",
+  "visionText": "Aksiam envisions a world where education is accessible to all, where young people have equal opportunities to succeed, and where the community supports each other to build a better future.",
+  "discover":"Discover our projects",
+
+  "latestactualite": "Latest News",
+"latestactualiteText": "Discover our latest publications and learn more about our commitment.",
+"lire": "Read more",
+"contactus": "Contact us",
+"contactusText": "Do you have a question or suggestion? Fill out the form below, and we will get back to you quickly.",
+"sendmessage": "Send message",
+
+"name": "Name",
+"email": "Email",
+"message": "Message",
+"nameplaceholder": "Your name",
+"messageplaceholder": "Your message",
+"emailplaceholder": "Your email",
+
+ "searchphoto": "Search for a photo...",
+"vue": "View",
+"nophoto": "No photos found.",
+ "newsText": "Discover the latest news and projects.",
+"nonews": "No articles found.",
+"lireplus": "Read more",
+"searchnews": "Search for an article...",
+"resultfor": "Results for ",
+"searchvideo":"Search for an video...",
+
+"department": "Department",
+"administrator": "Administrator"
+
+
+
+
+
+
+
+
+
+}

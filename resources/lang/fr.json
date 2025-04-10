@@ -1,0 +1,67 @@
+{
+  "home": "Accueil",
+
+  "news": "Actualités",
+  "newsText":"Découvrez les dernières nouvelles et projets.",
+  "nonews":"Aucun article trouvé.",
+  "lireplus":"Lire plus",
+  "searchnews":"Rechercher un article...",
+  "resultfor":"Résultats pour ",
+
+
+
+  "jamats": "Jamats",
+  "about": "À propos",
+  "contact": "Contact",
+  "media": "Médias",
+
+  "photo": "Photo",
+  "searchphoto":"Rechercher un photo...",
+  "vue":"Voir",
+  "nophoto":"Aucun photos trouvé.",
+  
+
+
+
+  "descphoto": "Description pour la photo",
+  "video": "Vidéo",
+  "novideo":"Aucun photos trouvé.",
+
+  "searchvideo":"Rechercher un video...",
+
+  "descvideo": "Description pour la vidéo",
+  "login": "Se connecter",
+
+  "bienvenue":"Bienvenue sur Aksiam",
+  "bienvenue_text":"Une association à but non lucratif au service de la communauté.",
+  "bienvenue_btn":"En savoir plus",
+  "bienvenue_btn2":"Nous rejoindre",
+
+  "apropos":"À propos de Aksiam ",
+  "aproposText":"Aksiam est une organisation à but non lucratif qui se consacre à aider les communautés locales à travers des initiatives éducatives et sociales. Notre mission est de créer un impact durable en offrant des ressources et un soutien à ceux qui en ont besoin.",
+  "mission":"Notre Mission & Vision",
+  "missionText":"Aksiam est une organisation à but non lucratif qui se consacre à aider les communautés locales à travers des initiatives éducatives et sociales. Notre mission est de créer un impact durable en offrant des ressources et un soutien à ceux qui en ont besoin.",
+  "vision":"Notre Vision",
+  "visionText":"Aksiam envisage un monde où l'éducation est accessible à tous, où les jeunes ont des opportunités égales pour réussir et où la communauté s’entraide pour construire un avenir meilleur.",
+  
+  "discover":"Découvrez nos projets",
+
+  "latestactualite":"Derniers Actualités",
+  "latestactualiteText":"Découvrez nos dernières publications et apprenez-en plus sur notre engagement.",
+  "lire":"Lire la suite",
+  "contactus":"Contactez-nous",
+  "contactusText":"Vous avez une question ou une suggestion ? Remplissez le formulaire ci-dessous et nous vous répondrons rapidement.",
+  "sendmessage":"Envoyer le message",
+
+  "name":"Nom",
+  "email":"Email",
+  "message":"Message",
+  "nameplaceholder":"Votre nom",
+  "messageplaceholder":"Votre message",
+  "emailplaceholder":"Votre email",
+
+  "department":"Departement",
+  "administrator":"Administrateur"
+
+
+}
