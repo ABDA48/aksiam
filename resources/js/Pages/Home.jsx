@@ -4,7 +4,7 @@ import About from './Components/About'
 import Latestarticle from './Components/Latestarticle';
 import Contact from './Components/Contact'; 
 
-export default  function Home({articles,imagesSection}) {
+export default  function Home({articles,imagesSection,cles}) {
  
 
 
@@ -14,7 +14,7 @@ export default  function Home({articles,imagesSection}) {
     <>
         <div className=''>
            <Hero  images={imagesSection}  />
-           <About images={imagesSection} />
+           <About  cles={cles}/>
            <Latestarticle articles={articles} />
            <Contact />
         </div>

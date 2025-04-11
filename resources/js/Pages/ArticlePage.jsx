@@ -18,7 +18,7 @@ const ArticlePage = ({ article, relatedArticles }) => {
 
   const imagesSection = article.images.map((src, index) => ({
     src: `/storage/${src}`, // Prepend storage path to each image source
-    alt: `${article.department.titre} - Image ${index + 1}`
+    alt: `Image ${index + 1}`
 }));
 
   return (
@@ -44,7 +44,7 @@ const ArticlePage = ({ article, relatedArticles }) => {
       >
         <h1 className="text-4xl font-bold text-gray-900">{article.titre}</h1>
         <p className="text-gray-600 mt-2">
-          {article.date} • <span className="font-semibold">{article.department.titre}</span>
+          {article.date} • <span className="font-semibold">{article.department? article.department.titre:""}</span>
         </p>
       </motion.div>
 

@@ -6,36 +6,9 @@ import ChiffresCles from "./Components/ChiffresCles/ChiffresCles";
 import { Link } from "@inertiajs/react";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink } from "@/components/ui/pagination";
 
-const DepartmentPage = ({department,articles}) => {
-    const cles=[
-        {
-          "chiffre":40,"title":"Departement","subtitle":"Membre de departement"
-        },
-        {
-          "chiffre":100,"title":"Jamats","subtitle":"Total  de Jamats"
-        },
-        {
-          "chiffre":1000,"title":"Membres","subtitle":"Total des membres "
-        },
-      ]
-      const trustes=[
-        {
-            id: 1,
-            name: "Charlie Brown",
-            email: "charlie.brown@aksiam.com",
-            role: "Sweeper",
-             
-            image: "/images/p4.jpg",
-          },
-          {
-            id: 2,
-            name: "Charlie Brown",
-            email: "charlie.brown@aksiam.com",
-            role: "Sweeper",
-             
-            image: "/images/p1.jpg",
-          },
-    ]
+const DepartmentPage = ({department,articles,cles,stafs}) => {
+   
+      
 console.log()
       const [currentPage, setCurrentPage] = useState(1);
       const itemsPerPage = 6; 
@@ -91,7 +64,7 @@ console.log()
         Membres de Staffs
     </h2>
     <div className="flex flex-wrap justify-center gap-10">
-                  {trustes.map((admin) => (
+                  {stafs.map((admin) => (
                     <motion.div
                       key={admin.id}
                       className="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 w-64"
@@ -100,7 +73,7 @@ console.log()
                       transition={{ duration: 0.5 }}
                     >
                       <motion.img
-                        src={`${admin.image}`}
+                        src={`/storage/${admin.image}`}
                         alt={admin.name}
                         className="w-50 h-50 object-cover rounded-full border-4 border-gray-200"
                         initial={{ scale: 0 }}
@@ -108,7 +81,7 @@ console.log()
                         transition={{ duration: 0.3 }}
                       />
                       <div className="mt-4 text-center">
-                        <h4 className="text-xl font-semibold text-gray-800">{admin.name}</h4>
+                        <h4 className="text-xl font-semibold text-gray-800">{admin.nom}</h4>
                         <p className="text-sm text-gray-500 mt-2">{admin.role}</p>
                         <p className="text-xs text-gray-400 mt-1">{admin.email}</p>
                       </div>

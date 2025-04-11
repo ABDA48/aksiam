@@ -1,17 +1,9 @@
 import React from "react";
-import { motion } from "framer-motion";
-import Cles from "./Cles";
+ import Cles from "./Cles";
 import Title from "../Title";
 
 function ChiffresCles({ title, itemList }) {
-  const TextVariants = {
-    hidden: { opacity: 0, x: -180 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { type: "spring", mass: 2, duration: 1, delay: 0.5 },
-    },
-  };
+ 
 
   return (
     <div className="relative     flex flex-col items-center justify-center">

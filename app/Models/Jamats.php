@@ -31,5 +31,8 @@ class Jamats extends Model
         return $this->hasMany(Cimitiere::class);
     }
 
-
+    public function cles()
+    {
+        return $this->hasMany(Cle::class);
+    }
 }

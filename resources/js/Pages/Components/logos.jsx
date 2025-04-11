@@ -18,7 +18,7 @@ export const CarouselSize = ({logos}) => {
                     <CarouselItem key={index} className="sm:basis-1/2 md:basis-1/5 lg:basis-1/7">
                         <div className="p-1 my-5">
                                    <Link href={logo.link ? logo.link : "/"}>
-                                    <img src={logo.path} alt={`Logo ${index + 1}`} className="w-[100px] h-[100px]  object-cover rounded-xl " />
+                                    <img src={`/storage/${logo.image}`} alt={`Logo ${index + 1}`} className="w-[100px] h-[100px]  object-cover rounded-xl " />
                                     </Link>
                         </div>
                     </CarouselItem>

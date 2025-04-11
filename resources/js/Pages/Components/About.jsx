@@ -5,20 +5,10 @@ import {PATHS} from '../constant'
 import  useTranslations  from "./useTranslations"; // Import the custom hook
 import ChiffresCles from "./ChiffresCles/ChiffresCles";
 
-const About = ({images}) => {
+const About = ({cles}) => {
 
   const { translations, loading, error } = useTranslations(); // Fetch translations
-const cles=[
-  {
-    "chiffre":40,"title":"Departement","subtitle":"Membre de departement"
-  },
-  {
-    "chiffre":100,"title":"Jamats","subtitle":"Total  de Jamats"
-  },
-  {
-    "chiffre":1000,"title":"Membres","subtitle":"Total des membres "
-  },
-]
+ 
   return (
     <section className="py-20 bg-gray-100">
       <div className="max-w-6xl mx-auto text-center px-6">
