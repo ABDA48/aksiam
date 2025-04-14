@@ -42,7 +42,7 @@ const JamatsPage = ({jamat,articles,cles,stafs}) => {
 
       {/* About Section */}
 <section className="w-full max-w-4xl mx-auto py-12 px-6 flex flex-col items-center text-center">
-  <h2 className="text-3xl font-bold mb-4 text-center">About the Jamats</h2>
+  <h2 className="text-3xl font-bold mb-4 text-center">Apopos de  Jamats à {jamat.titre}</h2>
   <p 
   className="text-lg text-gray-600 leading-relaxed"
   dangerouslySetInnerHTML={{ __html: jamat.apropos }}
