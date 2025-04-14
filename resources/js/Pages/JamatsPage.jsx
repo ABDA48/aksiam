@@ -37,6 +37,15 @@ const JamatsPage = ({jamat,articles,cles,stafs}) => {
   </Carousel>
   <div className="absolute inset-0 flex items-center justify-center">
     <h1 className="text-white text-4xl md:text-5xl font-bold">{jamat.titre}</h1>
+    <p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="mt-4 text-lg md:text-2xl text-white/90 font-semibold bg-gray-900 bg-opacity-75 px-4 py-2 rounded-lg"
+        >
+                  Bienvenue sur  {jamat.titre} Jamats
+
+        </p>
   </div>
 </section>
 

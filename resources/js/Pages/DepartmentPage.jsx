@@ -38,6 +38,15 @@ console.log()
   </Carousel>
   <div className="absolute inset-0 flex items-center justify-center">
     <h1 className="text-white text-4xl md:text-5xl font-bold">{department.titre}</h1>
+    <p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="mt-4 text-lg md:text-2xl text-white/90 font-semibold bg-gray-900 bg-opacity-75 px-4 py-2 rounded-lg"
+        >
+                  Bienvenue sur  {department.titre} departement
+
+        </p>
   </div>
 </section>
 
@@ -56,7 +65,7 @@ console.log()
           className="mt-12 flex flex-col  justify-center items-center"
         >
 
-         <ChiffresCles title={""} itemList={cles} />
+         <ChiffresCles title={"Notre Impact en Chiffres"} itemList={cles} />
     </motion.div>
 </section>
 <section>
