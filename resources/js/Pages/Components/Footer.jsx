@@ -8,7 +8,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
           <p className="text-sm">&copy; {new Date().getFullYear()} AKSIAM. Tous droits réservés.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a href="/" className="hover:text-gray-400">Accueil</a>
-             <a href="/about" className="hover:text-gray-400">Contact</a>
+             <a href="/contact" className="hover:text-gray-400">Contact</a>
              <a href="/admin" className="hover:text-gray-400">Se Connecter</a>
 
           </div>
