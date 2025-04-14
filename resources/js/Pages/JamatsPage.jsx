@@ -55,7 +55,7 @@ const JamatsPage = ({jamat,articles,cles,stafs}) => {
           className="mt-12 flex flex-col  justify-center items-center"
         >
 
-         <ChiffresCles title={""} itemList={cles} />
+         <ChiffresCles title={"Notre Impact en Chiffres"} itemList={cles} />
     </motion.div>
 </section>
 <section>

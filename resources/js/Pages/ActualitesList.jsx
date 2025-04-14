@@ -84,7 +84,7 @@ const Actualites = ({articles,departments,search}) => {
                 <img src={`/storage/${article.featured_img}`} alt={article.titre} className="w-full h-40 object-cover" />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-800">{article.titre}</h3>
-                  <p className="text-sm text-gray-500 mt-1">{article.date} • {article.department ? article.department.titre : 'No category'}</p>
+                  <p className="text-sm text-gray-500 mt-1">{article.date} • {article.department ? article.department.titre : ''}</p>
                   <Link href={`/actualités/${article.slug}`}>
                     <span className="mt-4 inline-block px-4 py-2 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700 transition cursor-pointer">
                     Lire plus
