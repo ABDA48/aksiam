@@ -10,7 +10,7 @@ const About = ({cles}) => {
   const { translations, loading, error } = useTranslations(); // Fetch translations
  
   return (
-    <section className="py-20 bg-gray-100">
+    <section className="py-20 bg-gray-100" id="about">
       <div className="max-w-6xl mx-auto text-center px-6">
         {/* Title */}
         <motion.h2 

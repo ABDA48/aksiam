@@ -66,7 +66,7 @@ const Hero = ({images}) => {
           className="mt-6 flex justify-center space-x-4"
         >
           <Link
-            href={PATHS.ABOUT}
+            href={'#about'}
             className="bg-white text-green-600 px-6 py-3 text-lg rounded-lg shadow-md hover:bg-gray-100"
             aria-label="En savoir plus"
           >
