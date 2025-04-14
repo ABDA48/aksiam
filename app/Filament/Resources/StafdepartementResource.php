@@ -12,12 +12,16 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Infolists\Infolist;
+use Filament\Infolists\Components\TextEntry;
+use Filament\Infolists\Components\ImageEntry;
+use Filament\Infolists\Components\Group;
 
 class StafdepartementResource extends Resource
 {
     protected static ?string $model = Stafdepartement::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-folder-plus';
 
     protected static ?string $navigationLabel = 'Stafs';
    protected static ?string $navigationGroup = 'Departement';
@@ -67,6 +71,7 @@ class StafdepartementResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -75,6 +80,44 @@ class StafdepartementResource extends Resource
             ]);
     }
 
+    public static function infolist(Infolist $infolist): Infolist
+    {
+        return $infolist
+            ->schema([
+
+                ImageEntry::make('image')
+                        ->label('Image')
+                        ->circular()
+                        ->height(200)->columnSpan('full')->alignment('center'),
+                Group::make([
+                    'default' => 1,
+                    'sm' => 2,
+                    'md' => 3,
+                    'lg' => 4,
+                    'xl' => 6,
+                    '2xl' => 8,
+                ])->schema([
+                    \Filament\Infolists\Components\Section::make("Information le Staf")
+                    ->schema([
+                    TextEntry::make('nom')
+                        ->label('Nom')
+                        ->badge()
+                        ->color('success'),
+     
+                    TextEntry::make('role')
+                        ->label('Rôle')
+                        ->icon('heroicon-m-user-circle')
+                        ->color('primary'),
+                 ])->columns(2),
+                 ])->columnSpanFull(),
+
+                
+                // Other fields
+                
+            ])
+           
+            ;
+    }
     public static function getRelations(): array
     {
         return [
@@ -88,6 +131,7 @@ class StafdepartementResource extends Resource
             'index' => Pages\ListStafdepartements::route('/'),
             'create' => Pages\CreateStafdepartement::route('/create'),
             'edit' => Pages\EditStafdepartement::route('/{record}/edit'),
+            'view' => Pages\ViewStafdepartement::route('/{record}'),
         ];
     }
 }

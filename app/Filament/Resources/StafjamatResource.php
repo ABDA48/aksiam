@@ -17,7 +17,7 @@ class StafjamatResource extends Resource
 {
     protected static ?string $model = Stafjamat::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-folder-plus';
 
     protected static ?string $navigationLabel = 'Stafs';
    protected static ?string $navigationGroup = 'Jamats';

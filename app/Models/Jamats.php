@@ -23,12 +23,12 @@ class Jamats extends Model
 
     public function members()
     {
-        return $this->hasMany(Member::class);
+        return $this->hasMany(Member::class,"jamat_id");
     }
 
     public function cimitieres()
     {
-        return $this->hasMany(Cimitiere::class);
+        return $this->hasMany(Cimitiere::class,"jamat_id");
     }
 
     public function cles()

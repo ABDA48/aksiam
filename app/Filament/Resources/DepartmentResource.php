@@ -4,21 +4,29 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\DepartmentResource\Pages;
 use App\Filament\Resources\DepartmentResource\RelationManagers;
+use App\Filament\Resources\DepartmentResource\RelationManagers\MembersRelationManager;
+use App\Filament\Resources\DepartmentResource\RelationManagers\StafdepartementsRelationManager;
 use App\Models\Department;
 use Filament\Forms;
+use Filament\Infolists\Components\Group;
+use Filament\Infolists\Components\Stack;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+ 
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
-
+use Filament\Infolists;
+use Filament\Infolists\Infolist;
+use Filament\Infolists\Components\TextEntry;
+use Filament\Infolists\Components\ImageEntry;
 class DepartmentResource extends Resource
 {
     protected static ?string $model = Department::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-bookmark-square';
 
      protected static ?string $navigationLabel = 'Departement';
     protected static ?string $navigationGroup = 'Departement';
@@ -66,6 +74,7 @@ class DepartmentResource extends Resource
     {
         return $table
             ->columns([
+
                 Tables\Columns\TextColumn::make('titre'),
                 // Optional: debounce for better performance while typing
                 Tables\Columns\TextColumn::make('slug'),
@@ -85,12 +94,14 @@ class DepartmentResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -98,11 +109,61 @@ class DepartmentResource extends Resource
                 ]),
             ]);
     }
+    public static function infolist(Infolist $infolist): Infolist
+    {
+        return $infolist
+            ->schema([
+                ImageEntry::make('image')
+                        ->label('Image')
+                        ->circular()
+                        ->height(200)->columnSpan('full')->alignment('center'),
+                Group::make([
+                    'default' => 1,
+                    'sm' => 2,
+                    'md' => 3,
+                    'lg' => 4,
+                    'xl' => 6,
+                    '2xl' => 8,
+                ])->schema([
+                    \Filament\Infolists\Components\Section::make("Information de Chef de department")
+                    ->schema([
+                    TextEntry::make('nom')
+                        ->label('Nom')
+                        ->badge()
+                        ->color('success'),
+     
+                    TextEntry::make('role')
+                        ->label('Rôle')
+                        ->icon('heroicon-m-user-circle')
+                        ->color('primary'),
+                 ])->columns(2),
+                 ])->columnSpanFull(),
 
+                 \Filament\Infolists\Components\Section::make("Information de   department")
+                 ->schema([ 
+                    TextEntry::make('titre')
+                    ->label('Titre')
+                     ->columnSpanFull(),
+    
+                TextEntry::make('slug')
+                    ->label('Slug')
+                    ->copyable()
+                    ->color('gray')
+                     ->columnSpanFull(),
+
+                 ]),
+                // Other fields
+                
+            ])
+           
+            ;
+    }
     public static function getRelations(): array
     {
         return [
-            //
+            MembersRelationManager::class,
+             StafdepartementsRelationManager::class,
+          
         ];
     }
 
@@ -112,6 +173,8 @@ class DepartmentResource extends Resource
             'index' => Pages\ListDepartments::route('/'),
             'create' => Pages\CreateDepartment::route('/create'),
             'edit' => Pages\EditDepartment::route('/{record}/edit'),
+            'view' => Pages\ViewDepartment::route('/{record}'),
+
         ];
     }
 }

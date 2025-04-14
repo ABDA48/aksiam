@@ -7,12 +7,15 @@ use App\Filament\Resources\MemberResource\RelationManagers;
 use App\Models\Member;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Infolists\Components\Group;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-
+use Filament\Infolists\Infolist;
+use Filament\Infolists\Components\TextEntry;
+use Filament\Infolists\Components\ImageEntry;
 class MemberResource extends Resource
 {
     protected static ?string $model = Member::class;
@@ -61,6 +64,7 @@ class MemberResource extends Resource
                     ->searchable(),
                     Tables\Columns\TextColumn::make('jamat.titre')->sortable()->label('Jamat'),
                     Tables\Columns\TextColumn::make('department.titre')->sortable()->label('Department'),
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -75,12 +79,67 @@ class MemberResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
+
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
+    }
+    public static function infolist(Infolist $infolist): Infolist
+    {
+        return $infolist
+            ->schema([
+                ImageEntry::make('image')
+                        ->label('Image')
+                        ->circular()
+                        ->height(200)->columnSpan('full')->alignment('center'),
+                Group::make([
+                    'default' => 1,
+                    'sm' => 2,
+                    'md' => 3,
+                    'lg' => 4,
+                    'xl' => 6,
+                    '2xl' => 8,
+                ])->schema([
+                    \Filament\Infolists\Components\Section::make("Information de Chef de department")
+                    ->schema([
+                    TextEntry::make('nom')
+                        ->label('Nom')
+                        ->badge()
+                        ->color('success'),
+     
+                    TextEntry::make('ville')
+                        ->label('Address')
+                        ->icon('heroicon-m-user-circle')
+                        ->color('primary'),
+                 ])->columns(2),
+                 ])->columnSpanFull(),
+
+                 \Filament\Infolists\Components\Section::make("Information de   department")
+                 ->schema([ 
+                  
+                    TextEntry::make('department.titre')
+                    ->label('Department')
+                     ->columnSpanFull(),
+    
+                TextEntry::make('jamat.titre')
+                    ->label('Jamats')
+                    ->copyable()
+                    ->color('gray')
+                     ->columnSpanFull(),
+                    ])->columns(2),
+
+                 
+
+                
+                // Other fields
+                
+            ])
+           
+            ;
     }
 
     public static function getRelations(): array
@@ -96,6 +155,7 @@ class MemberResource extends Resource
             'index' => Pages\ListMembers::route('/'),
             'create' => Pages\CreateMember::route('/create'),
             'edit' => Pages\EditMember::route('/{record}/edit'),
+            'view' => Pages\ViewMember::route('/{record}'),
         ];
     }
 }

@@ -18,7 +18,7 @@ class CimitiereResource extends Resource
     protected static ?string $model = Cimitiere::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    protected static ?string $navigationLabel = 'Cimitière';
     public static function form(Form $form): Form
     {
         return $form
