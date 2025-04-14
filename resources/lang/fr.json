@@ -32,17 +32,17 @@
   "descvideo": "Description pour la vidéo",
   "login": "Se connecter",
 
-  "bienvenue":"Bienvenue sur Aksiam",
+  "bienvenue":"Bienvenue sur AKSIAM",
   "bienvenue_text":"Une association à but non lucratif au service de la communauté.",
   "bienvenue_btn":"En savoir plus",
   "bienvenue_btn2":"Nous rejoindre",
 
-  "apropos":"À propos de Aksiam ",
-  "aproposText":"Aksiam est une organisation à but non lucratif qui se consacre à aider les communautés locales à travers des initiatives éducatives et sociales. Notre mission est de créer un impact durable en offrant des ressources et un soutien à ceux qui en ont besoin.",
+  "apropos":"À propos de AKSIAM ",
+  "aproposText":"AKSIAM est une organisation à but non lucratif qui se consacre à aider les communautés locales à travers des initiatives éducatives et sociales. Notre mission est de créer un impact durable en offrant des ressources et un soutien à ceux qui en ont besoin.",
   "mission":"Notre Mission & Vision",
-  "missionText":"Aksiam est une organisation à but non lucratif qui se consacre à aider les communautés locales à travers des initiatives éducatives et sociales. Notre mission est de créer un impact durable en offrant des ressources et un soutien à ceux qui en ont besoin.",
+  "missionText":"AKSIAM est une organisation à but non lucratif qui se consacre à aider les communautés locales à travers des initiatives éducatives et sociales. Notre mission est de créer un impact durable en offrant des ressources et un soutien à ceux qui en ont besoin.",
   "vision":"Notre Vision",
-  "visionText":"Aksiam envisage un monde où l'éducation est accessible à tous, où les jeunes ont des opportunités égales pour réussir et où la communauté s’entraide pour construire un avenir meilleur.",
+  "visionText":"AKSIAM envisage un monde où l'éducation est accessible à tous, où les jeunes ont des opportunités égales pour réussir et où la communauté s’entraide pour construire un avenir meilleur.",
   
   "discover":"Découvrez nos projets",
 
@@ -61,7 +61,10 @@
   "emailplaceholder":"Votre email",
 
   "department":"Departement",
-  "administrator":"Administrateur"
+  "administrator":"Administrateur",
+"chiffre":"Notre Impact en Chiffres",
+"noActuality":"Nos Actualités"
+
 
 
 }

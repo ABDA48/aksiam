@@ -89,8 +89,7 @@ const Navbar = () => {
             <DropdownMenuContent align="end">
               <DropdownMenuItem onClick={() => toggleLanguage("fr")}>Français</DropdownMenuItem>
               <DropdownMenuItem onClick={() => toggleLanguage("en")}>English</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => toggleLanguage("gj")}>Gujarati</DropdownMenuItem>
-            </DropdownMenuContent>
+             </DropdownMenuContent>
           </DropdownMenu>
           {!usePage().props.auth?.user ? (
             <Button variant="outline" onClick={handleLogin}>

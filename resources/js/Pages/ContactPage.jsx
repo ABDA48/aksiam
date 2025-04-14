@@ -5,7 +5,7 @@ const ContactPage = () => {
   return (
     <section className="bg-gray-100">
       {/* Hero Section */}
-      <div className="relative w-full h-[400px] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('/images/mosque.jpg')" }}>
+      <div className="relative w-full h-[400px] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('/images/img7.jpg')" }}>
         <motion.h1 
           initial={{ opacity: 0, y: -50 }} 
           animate={{ opacity: 1, y: 0 }} 

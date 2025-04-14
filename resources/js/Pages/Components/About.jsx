@@ -69,7 +69,7 @@ const About = ({cles}) => {
           className="mt-12 flex flex-col  justify-center items-center"
         >
 
-         <ChiffresCles title={"Nos Chiffre Clés "} itemList={cles} />
+         <ChiffresCles title={translations.chiffre} itemList={cles} />
 
 
         

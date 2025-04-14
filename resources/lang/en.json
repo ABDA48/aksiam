@@ -11,16 +11,16 @@
   "descvideo": "Description for Video",
   "login": "Login",
 
-  "bienvenue": "Welcome to Aksiam",
+  "bienvenue": "Welcome to AKSIAM",
   "bienvenue_text": "A non-profit organization serving the community.",
   "bienvenue_btn": "Learn more",
   "bienvenue_btn2": "Join us",
 
-  "apropos": "About Aksiam",
+  "apropos": "About AKSIAM",
   "mission": "Our Mission & Vision",
-  "missionText": "Aksiam is a non-profit organization dedicated to helping local communities through educational and social initiatives. Our mission is to create a lasting impact by providing resources and support to those in need.",
+  "missionText": "AKSIAM is a non-profit organization dedicated to helping local communities through educational and social initiatives. Our mission is to create a lasting impact by providing resources and support to those in need.",
   "vision": "Our Vision",
-  "visionText": "Aksiam envisions a world where education is accessible to all, where young people have equal opportunities to succeed, and where the community supports each other to build a better future.",
+  "visionText": "AKSIAM envisions a world where education is accessible to all, where young people have equal opportunities to succeed, and where the community supports each other to build a better future.",
   "discover":"Discover our projects",
 
   "latestactualite": "Latest News",
@@ -48,8 +48,9 @@
 "searchvideo":"Search for an video...",
 
 "department": "Department",
-"administrator": "Administrator"
-
+"administrator": "Administrator",
+"chiffre":"Our Impact in Numbers",
+"noActuality":"No Actuality"
 
 
 

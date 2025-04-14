@@ -94,7 +94,7 @@ const Actualites = ({articles,departments,search}) => {
               </motion.div>
             ))
           ) : (
-            <p className="text-center text-gray-600 col-span-3">No Actualités </p>
+            <p className="text-center text-gray-600 col-span-3">{translations.noActuality}</p>
           )}
         </div>
       </div>
