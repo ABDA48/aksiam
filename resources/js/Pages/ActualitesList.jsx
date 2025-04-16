@@ -119,6 +119,9 @@ const Actualites = ({articles,departments,search}) => {
                         ))}
                     </PaginationContent>
                 </Pagination>
+
+
+                
             </div>
     </div>
   );
